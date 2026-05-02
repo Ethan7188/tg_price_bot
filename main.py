@@ -251,7 +251,7 @@ def main():
     app.add_handler(CommandHandler("watch", watch))
     app.add_handler(CommandHandler("mywatch", mywatch))
     app.add_handler(CommandHandler("unwatch", unwatch))
-    app.job_queue.run_repeating(check_watch, interval=10, first=5)
+    app.job_queue.run_repeating(check_watch, interval=300, first=30)
     print("机器人已启动...")
     app.run_polling()
 
